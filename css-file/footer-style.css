@@ -1,0 +1,49 @@
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 40dvh;
+    background-color: var(--white);
+    position: relative;
+}
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+footer div img {
+    width: 3vw;
+}
+
+a { text-decoration: none; text-transform: capitalize}
+
+footer nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+footer nav a{
+   color: var(--black);
+   padding: 0 0 2px 0;
+   position: relative;
+   transition: .3s .05s ease-in-out;
+   margin: 0 5px;
+   font-size: 1.2rem;
+}
+footer nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 5%;
+    background-color: var(--black);
+    transition: .3s .05s ease-in-out;
+}
+footer nav a:hover::before { width: 100%}

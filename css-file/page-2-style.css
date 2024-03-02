@@ -1,0 +1,53 @@
+/* page 2 */
+.page2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100dvh;
+    padding: 20px;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--white);
+}
+.page2 > div h2{
+    padding-bottom: 15px;
+    font-size: 2.5rem;
+}
+.page2 > div {
+    margin-top: 100px;
+}
+.page2 > div p {
+    line-height: 30px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.page2 nav {
+    padding-bottom: 30px;  
+}
+.page2 nav a {
+    color: var(--white);
+    font-size: 1rem;
+    border: 1.5px solid var(--white);
+    text-transform: uppercase;
+    padding: 20px 40px;
+    transition: .3s .1s ease-in-out;
+    position: relative;
+    font-weight: 600; 
+    z-index: 9
+}
+.page2 nav a:hover {color: var(--black);}
+.page2 nav a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--white);
+    top: 0%;
+    left: 0;
+    transition: .3s .1s ease-in-out;
+    z-index: -1;
+}
+.page2 nav a:hover::before {
+    width: 100%;
+}

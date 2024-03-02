@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../photo/PAW/icon.png">
+    <title>Astronomy X NEBULA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+        body { 
+            background-color: #000; 
+            font-family: 'Comfortaa', arial;
+        }
+
+        .page {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 90dvh;
+        }
+        .page div {
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        img {
+            width: 500px;
+            height: 500px;
+            border-radius: 5px;
+            transition: transform .4s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+        p {
+            position: absolute;
+            bottom: -40%;
+            padding: 10px;
+            font-size: 30px;
+            color: #fff;
+            transition: bottom .5s .1s ease-in-out
+        }
+        .page div:hover p {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page"> 
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Barnard_33.jpg/480px-Barnard_33.jpg" alt="">
+            <p>Horsehead Nebula</p>
+        </div>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Comets_Kick_up_Dust_in_Helix_Nebula_%28PIA09178%29.jpg/1024px-Comets_Kick_up_Dust_in_Helix_Nebula_%28PIA09178%29.jpg" alt="">
+            <p>Helix Nebula</p>
+        </div>
+    </div>
+
+</body>
+</html>

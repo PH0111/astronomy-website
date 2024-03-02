@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Comfortaa', arial;
+    --white: #fff;
+    --black: #000;
+}
+::selection {
+    background-color: var(--white);
+    color: #161616;
+}
+a {text-decoration: none}
+h1, h2, h3 {text-transform: uppercase}
+ul {list-style: none}
+
+/* page 1 */
+.page1 {
+    background-image: linear-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(https://wallpaperaccess.com/full/672531.jpg);
+}
+
+
+/* page 2 */
+.page2 {
+    background-image: linear-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(https://wallpapercave.com/dwp2x/wp5466366.jpg);
+}
+
+
+/* page 3 */
+.page3 {
+    background-image: url(https://wallpapercave.com/dwp2x/wp4760449.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: max-content;
+}

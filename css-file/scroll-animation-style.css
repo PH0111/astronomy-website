@@ -1,0 +1,23 @@
+
+.page1 > div:last-of-type {
+    grid-area: sc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page1 > div:last-of-type .bx-chevron-down {
+    font-size: 5vw;
+    color: var(--white);
+    margin-top: -10px;
+    animation: anim-op 2s cubic-bezier(1, 0.04, 0.26, 1.16) infinite;
+}
+@keyframes anim-op { 
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

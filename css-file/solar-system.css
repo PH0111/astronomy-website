@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Comfortaa', arial;
+    --white: #fff;
+    --black: #000;
+}
+::selection {
+    background-color: var(--white);
+    color: #161616;
+}
+a {text-decoration: none}
+h1, h2, h3 {text-transform: uppercase}
+ul {list-style: none}
+
+/* page 1 */
+.page1 {
+    background-image: linear-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Solar_System_true_color.jpg/1920px-Solar_System_true_color.jpg);
+}
+.page1 h1 {
+    font-size: 3.5rem;
+    margin-top: 50px;
+}
+
+/* page 2 */
+.page2 {
+    background-image: linear-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(https://wallpaperaccess.com/full/37640.jpg);
+}
+
+/* //////////////////////////////////////////////// */
+.Diagram-of-solar-system {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200dvh;
+    background-color: var(--black);
+}
+.Diagram-of-solar-system > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Diagram-of-solar-system > div div {
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+/* sun */
+.Diagram-of-solar-system > div .sun {
+    width: 80px;
+    height: 80px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px var(--white);
+}
+.Diagram-of-solar-system > div .planet {
+    border: 1px dashed var(--white);
+    animation-name: solar-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.Diagram-of-solar-system > div .planet > span {
+    background-color: var(--white);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+}
+/* mercury */
+.Diagram-of-solar-system > div .Mercury {
+    width: 100px;
+    height: 100px;
+    animation-duration: 20s;
+}
+.Diagram-of-solar-system > div .Mercury span {
+    width: 8px;
+    height: 8px;
+    top: calc(50% - 8px);
+    right: calc(-4px);
+    background-color: #cdcdcd;
+    box-shadow: inset -1.5px 0px 2px #2e2e2e;
+}
+/* venus */
+.Diagram-of-solar-system > div .Venus {
+    width: 130px;
+    height: 130px;
+    animation-duration: 27s;
+}
+.Diagram-of-solar-system > div .Venus span {
+    width: 15px;
+    height: 15px;
+    top: calc(50% - 15px);
+    right: calc(-7.5px);
+    background-color: #cb7a37;
+    box-shadow: inset -4px 0px 2px #191919;
+}
+/* Earth */
+.Diagram-of-solar-system > div .Earth {
+    width: 180px;
+    height: 180px;
+    animation-duration: 32s;
+}
+.Diagram-of-solar-system > div .Earth span {
+    width: 18px;
+    height: 18px;
+    top: calc(50% - 18px);
+    right: calc(-9px);
+    background-color: #6aaeff;
+    box-shadow: inset -4px 0px 2px #222222;
+}
+/* mars */
+.Diagram-of-solar-system > div .mars {
+    width: 250px;
+    height: 250px;
+    animation-duration: 35s;
+}
+.Diagram-of-solar-system > div .mars span {
+    width: 13px;
+    height: 13px;
+    top: calc(50% - 13px);
+    right: calc(-6.5px);
+    background-color: #ff7f1c;
+    box-shadow: inset -3px 0px 2px #222222;
+}
+/* Jupiter */
+.Diagram-of-solar-system > div .Jupiter {
+    width: 400px;
+    height: 400px;
+    animation-duration: 45s;
+}
+.Diagram-of-solar-system > div .Jupiter > span {
+    width: 45px;
+    height: 45px;
+    top: calc(50% - 45px);
+    right: calc(-22.5px);
+    background-color: #c6c9d3;
+    box-shadow: inset -15px 0 20px #242424;
+    overflow: hidden;
+}
+.Diagram-of-solar-system > div .Jupiter > span span {
+    position: absolute;
+    background-color: #83796f;
+    width: 100%;
+    left: 0;
+    box-shadow: inset -21px 0 5px #303030;
+}
+
+.Diagram-of-solar-system > div .Jupiter > span span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    background-color: #83796f;
+    width: 100%;
+    height: 25%;
+}
+.Diagram-of-solar-system > div .Jupiter > span span:nth-child(2) {
+    position: absolute;
+    top: 35%;
+    height: 10%;
+}
+.Diagram-of-solar-system > div .Jupiter > span span:nth-child(3) {
+    position: absolute;
+    top: 60%;
+    height: 15%;
+}
+.Diagram-of-solar-system > div .Jupiter > span span:nth-child(4) {
+    position: absolute;
+    top: 80%;
+    height: 20%;
+}
+
+/* saturn */
+.Diagram-of-solar-system > div .saturn {
+    width: 610px;
+    height: 610px;
+    animation-duration: 50s;
+}
+.Diagram-of-solar-system > div .saturn span {
+    width: 35px;
+    height: 35px;
+    top: calc(50% - 35px);
+    right: calc(-17.5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #bb9d6e;
+    box-shadow: inset -10px 0 8px #424242;
+}
+.Diagram-of-solar-system > div .saturn span::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 10px solid #93826e;
+    padding: 10px;
+}
+.Diagram-of-solar-system > div .saturn span::after {
+    content: '';
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 2px solid #e3c8aa;
+}
+
+
+/* uranus */
+.Diagram-of-solar-system > div .uranus {
+    width: 800px;
+    height: 800px;
+    animation-duration: 55s;
+}
+.Diagram-of-solar-system > div .uranus span {
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 20px);
+    right: calc(-10px);
+    background-color: #ccf2f3;
+    box-shadow: inset -8px 0px 7px #3f3f3f;
+}
+/* neptune */
+.Diagram-of-solar-system > div .neptune {
+    width: 950px;
+    height: 950px;
+    animation-duration: 57s;
+}
+.Diagram-of-solar-system > div .neptune span {
+    width: 18px;
+    height: 18px;
+    top: calc(50% - 18px);
+    right: calc(-9px);
+    background-color: #62a6ff;
+    box-shadow: inset -7px 0px 4px #3f3f3f;
+}
+
+@keyframes solar-anim {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.Diagram-of-solar-system nav {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    left: 2%;
+    z-index: 9;
+}
+.Diagram-of-solar-system nav a {
+    color: var(--white);
+    padding: 5px;
+    position: relative;
+    transition: color .4s .1s ease-in-out;
+}
+.Diagram-of-solar-system nav a:hover {
+    color: var(--black);
+}
+.Diagram-of-solar-system nav a::after {
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--white);
+    z-index: -1;
+    transition: width .4s .1s ease-in-out;
+}
+.Diagram-of-solar-system nav a:hover::after {
+    width: 100%;
+}
+
+/* /////////////////////////////////////////// */
+
+
+/* ////// page 3 ////// */
+.page3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: max-content;
+    background-color: var(--black);
+}
+.page3 h2 {
+    color: var(--white);
+    font-size: 2rem;
+}
+.page3 .info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.page3 .info div {
+    max-width: 400px;
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    position: relative;
+}
+.page3 .info div h3 {
+    position: absolute;
+    color: var(--white);
+    left: -10%;
+    top: 40%;
+}
+.page3 .info div img {
+    width: 335px;
+    height: 250px;
+}
+.page3 .info div p {
+    color: var(--white);
+    line-height: 25px;
+}
+
+
+/* //////////// planet //////////// */
+
+
+.the-planets {
+    display: grid;
+    grid-template-columns: repeat(8 ,1fr);
+    grid-template-rows: repeat(1, 1fr);
+    height: 100dvh;
+    background-color: var(--black);
+    gap: 10px;
+    padding: 5px;
+}
+.the-planets > div {
+    background-size: cover;
+    background-position: center center;
+    transition: all .4s ease;
+    position: relative;
+}
+
+.the-planets > div::after {
+    content: 'planet'; 
+    position: absolute;
+    color: transparent;
+    font-size: 3vw;
+    top: 45%;
+    transition: color .4s ease;
+}
+.the-planets > div:hover::after {
+    color: var(--white);
+}
+.the-planets > div:hover{
+    transform: scale(1.1);
+}

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Julius+Sans+One&family=Marcellus+SC&family=Nova+Mono&family=Syncopate:wght@400;700&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
+
+/* @import "https://fonts.googleapis.com/css2?family=Megrim&display=swap"; */
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Major+Mono+Display&display=swap');
+
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 200px 1fr 100px;
+    grid-template-rows: 15dvh;
+    grid-template-areas: 'name link liste';
+    position: relative;
+    height: 15dvh;
+}
+header .name {
+    grid-area: name;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+} 
+header .name a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Audiowide', cursive;
+    font-family: 'Major Mono Display', monospace;
+}
+
+header > nav {
+    grid-area: link;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+header > nav > a, .link5, header > nav > div .planets a{
+    font-size: 1.3vw;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--white);
+    padding: 5px 20px;
+    /* border-left: 2px solid var(--white); */
+    font-weight: 600;
+    transition: .2s .1s ease-in-out;
+    position: relative;
+}
+header > nav > a:hover, .link5:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+header > nav > div { position: relative;}
+header > nav > div .planets {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    /* background-color: var(--white); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2));
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    left: 0%;
+    top: 120%;
+}
+header > nav > div:hover .planets {display: flex;}
+header > nav > div .planets a {color: var(--white);}
+header > nav > div .planets a:hover {background-color: var(--white); color: var(--black);}
+
+header .all-bar {
+    grid-area: liste;
+    width: 50px;
+    height: 40px;
+    margin:  calc(15vh - 65px) auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    right: 25px;
+    z-index: 99999999;
+}
+header .all-bar .bar {
+    width: 40%;
+    height: 5%;
+    background-color: var(--white);
+    z-index: 999;
+    transition: all .4s .1s ease-in-out;
+}
+/* header .all-bar:hover .bar{
+    background-color: var(--white);
+} */
+#dropdownMenu {
+    display: none; 
+    width: 200px;
+    height: 100dvh;
+    position: absolute;
+    right: -25px;
+    top: -26px;
+    overflow: hidden;
+}
+.link-liste nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 100dvh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2));
+    backdrop-filter: blur(5px);
+    position: absolute;
+    transition: 1s ease;
+}
+.link-liste nav a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5vw;
+    padding: 5px 10px;
+    transition: all .2s .1s ease-in-out;
+}
+.link-liste nav a:hover {
+    background-color: var(--white);
+    color: var(--black);
+}

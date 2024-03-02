@@ -1,0 +1,38 @@
+:root {
+    --black: #000;
+    --white: #fff;
+}
+.page3 h2 {
+    font-size: 2.5rem;
+    padding: 15px;
+    color: var(--white)
+}
+.page3 > div {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100dvh;
+    width: 100%
+}
+.page3 > div h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    padding-bottom: 20px;
+    color: var(--white)
+}
+.page3 > div ul li {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid var(--white);
+    padding: 5px;
+}
+.page3 > div ul li:hover p{
+    padding-left: 10px;
+}
+.page3 > div ul li p{
+    text-transform: capitalize;
+    color: var(--white);
+    padding: 3px;
+    transition: padding-left .2s ease;
+}
