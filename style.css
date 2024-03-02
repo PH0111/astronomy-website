@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body { 
+    font-family: 'Comfortaa', arial /*cursive*/;
+    --white: #ffffff;
+    --black: #000;
+}
+
+::selection {
+    background-color: #fff;
+    color: #161616;
+}
+.page1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 15vh 1fr 100px;
+    grid-template-areas: 'header header' 'title title' 'sc sc';
+    height: 100dvh;
+    background-image: linear-gradient( rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(https://www.spacex.com/static/images/dragon/refresh/DRAGON_DRAGON+ISS_3840x2025.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+/* title */
+.page1 > div:first-of-type {
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0px 40px;
+}
+.page1 > div:first-of-type h1 {
+    font-size: 10vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white);
+}
+.page1 > div:first-of-type p {
+    font-size: 1.5vw;
+    color: var(--white);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+/* page 2 */
+
+.page2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100dvh;
+    position: relative;
+}
+.page2 .background-clip {
+    position: absolute;
+    right: 0%;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio:16/9) {
+    .background-clip{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio:16/9) {
+    .background-clip {
+        width: auto;
+        height: 100%;
+    }
+}
+.page2 > div:first-of-type {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 40px;
+    margin-top: 8%;
+    opacity: .5;
+    transition: margin-top, opacity, .8s ease-in-out;
+}
+.page2 p {
+    color: var(--white);
+    font-size: 1.2vw;
+    line-height: 25px;
+}
+.page2 > div:last-of-type {margin: 0 40px;}
+.page2 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    margin: 0 40px;
+    bottom: 10%;
+    position: absolute;
+}
+.page2 nav a {
+    color: var(--white);
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border: 2px solid var(--white);
+    transition: .3s .1s ease-in-out;
+    position: relative;
+    font-weight: 600;
+}
+.page2 nav a:hover {
+    color: var(--black); 
+}
+.page2 nav a::before {
+    content: '';
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    transition: .3s .1s ease-in-out;
+    background-color: var(--white);
+    z-index: -1;
+}
+.page2 nav a:hover::before {
+    width: 100%;
+}
+
+
+/* page 3 */
+
+ul {list-style: none;}
+
+.page3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 45dvh;
+    grid-template-areas: 'contentOne contentOne';
+    height: 150dvh;
+    background-color: var(--black);
+}
+
+/* FIRST CHILD */
+.page3 > div:first-child {
+    grid-area: contentOne;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.page3 > div:first-child > h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 20px;
+    color: var(--white);
+    opacity: .4;
+    margin-top: 5%;
+    transition: .7s .1s ease-in-out;
+}
+.page3 > div:first-child > div ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+}
+.page3 > div:first-child > div ul li a{
+    border-bottom: 1px solid var(--white);
+    padding: 20px;
+    color: var(--white);
+    transition: .2s .1s ease-in;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.page3 > div:first-child > div ul li a:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.page3 > div:first-child > div:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 8%;
+}
+.page3 > div:first-child > div:last-of-type span {
+    position: absolute;
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .5;
+    transition: opacity .2s .1s ease-in-out;
+} 
+.page3 > div:first-child > div:last-of-type span:hover { opacity: 1}
+.page3 > div:first-child > div:last-of-type span::after {
+    content: '0000';
+    position: absolute;
+    display: block;
+    top: 130%;
+    transition: opacity .2s .1s ease-in-out;
+}
+.page3 > div:first-child > div:last-of-type .Visible-Matter::after {content: 'Visible Matter'}
+.page3 > div:first-child > div:last-of-type .dark-matter::after {content: 'dark matter'}
+.page3 > div:first-child > div:last-of-type .dark-energy::after {content: 'dark energy'}
+.page3 > div:first-child > div:last-of-type span:first-child {
+    width: 4.9%;
+    background-color: rgb(202, 202, 202);
+    left: 0%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.page3 > div:first-child > div:last-of-type span:nth-child(2) {
+    width: 26.8%;
+    background-color: rgb(141, 141, 141);
+    left: 4.9%
+}
+.page3 > div:first-child > div:last-of-type span:last-child {
+    width: 68.3%;
+    background-color: rgba(36, 36, 36, 0.934);
+    left: calc(4.9% + 26.8%);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* last child */
+.page3 > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+.page3 > div:last-child ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, max-content);
+    padding: 2.2rem;
+}
+.page3 > div:last-child ul li {
+    border: var(--white) solid 1px;
+    padding: 5px;
+}
+.page3 > div:last-child ul li p{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 26px;
+    text-transform: capitalize;
+}
+.page3 > div:last-child ul li p:first-child {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 10px 0 5px 0;
+}
+.page3 > div:last-child ul li p:last-child {
+    padding-left: 10px;
+}
+
